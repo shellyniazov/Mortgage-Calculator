@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>מחשבון משכנתא</h1>
+        </div>
+        <div class="inputs">
+            <p><input id="amount" class="inputt" onchange="checkInput(this,'Eror')"> ₪: סכום משכנתא
+            </p>
+
+
+            <p><input id="interest_rate" class="inputt" value="3.5" onchange="checkInput(this,'Eror')">%: ריבית
+                חודשית
+            </p>
+
+
+            <p><input id="months" class="inputt" onchange="checkInput(this,'Eror')"> :תקופה בחודשים</p>
+
+
+            <p><input id="salary" class="inputt" onchange="checkInput(this,'Eror')" onmouseout="checkValue();">
+                ₪:משכורת חודשית</p>
+
+
+
+
+            <button class="click" onclick="calc();">חשב</button>
+            <div class="result">
+                <h3 id="payment"></h3>
+                <h4 id="payment1"></h4>
+                
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+
+
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
