@@ -15,19 +15,20 @@
             <h1>מחשבון משכנתא</h1>
         </div>
         <div class="inputs">
-            <p><input id="amount" class="inputt" onchange="checkInput(this,'Eror')"> ₪: סכום משכנתא
+
+            <p><input id="amount" class="inputt" onchange="checkInput(this)"> ₪: סכום משכנתא
             </p>
 
 
-            <p><input id="interest_rate" class="inputt" value="3.5" onchange="checkInput(this,'Eror')">%: ריבית
+            <p><input id="interest_rate" class="inputt" value="3.5" onchange="checkInput(this)">%: ריבית
                 חודשית
             </p>
 
 
-            <p><input id="months" class="inputt" onchange="checkInput(this,'Eror')"> :תקופה בחודשים</p>
+            <p><input id="months" class="inputt" onchange="checkInput(this)"> :תקופה בחודשים</p>
 
 
-            <p><input id="salary" class="inputt" onchange="checkInput(this,'Eror')" onmouseout="checkValue();">
+            <p><input id="salary" class="inputt" onchange="checkInput(this)" onmouseout="checkValue();">
                 ₪:משכורת חודשית</p>
 
 
@@ -37,7 +38,7 @@
             <div class="result">
                 <h3 id="payment"></h3>
                 <h4 id="payment1"></h4>
-                
+
             </div>
         </div>
 
