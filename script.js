@@ -1,9 +1,11 @@
 function calc() {
 
+
     let amount = document.getElementById('amount').value;
     let interest_rate = document.getElementById('interest_rate').value;
     let months = document.getElementById('months').value;
     let salary = document.getElementById('salary').value;
+
 
 
     var sum = (amount * (interest_rate * 1)) / months;
@@ -18,60 +20,26 @@ function calc() {
     }
 }
 
+let input = [
+    'amount',
+    'interest_rate',
+    'months',
+    'salary'
+]
 
+let check = document.getElementsByTagName('input')
 
-
-function checkInput1(input) {
+function checkInput(input) {
     let value = Number(input.target.value)
 
     if (isNaN(value) || Number(input.target.value) < 0) {
-        amount.style.border = '1px solid red'
+        input.target.style.border = '1px solid red'
     } else {
-        amount.style.border = ''
+        input.target.style.border = ''
     }
 
 }
 
-amount.addEventListener('change', checkInput1);
-
-
-function checkInput2(input) {
-    let value = Number(input.target.value)
-
-    if (isNaN(value) || Number(input.target.value) < 0) {
-        interest_rate.style.border = '1px solid red'
-    } else {
-        interest_rate.style.border = ''
-    }
-
+for (let i = 0; i < input.length; i++) {
+    check[i].addEventListener('change', checkInput)
 }
-
-interest_rate.addEventListener('change', checkInput2);
-
-
-function checkInput3(input) {
-    let value = Number(input.target.value)
-
-    if (isNaN(value) || Number(input.target.value) < 0) {
-        months.style.border = '1px solid red'
-    } else {
-        months.style.border = ''
-    }
-
-}
-
-months.addEventListener('change', checkInput3);
-
-
-function checkInput4(input) {
-    let value = Number(input.target.value)
-
-    if (isNaN(value) || Number(input.target.value) < 0) {
-        salary.style.border = '1px solid red'
-    } else {
-        salary.style.border = ''
-    }
-
-}
-
-salary.addEventListener('change', checkInput4);
